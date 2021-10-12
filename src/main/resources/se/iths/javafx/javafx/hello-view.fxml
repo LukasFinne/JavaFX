@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="se.iths.javafx.javafx.HelloController">
+<VBox alignment="CENTER" prefHeight="528.0" prefWidth="563.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="se.iths.javafx.javafx.HelloController">
     <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <Label fx:id="welcomeText" />
+   <CheckBox fx:id="checkbox1" mnemonicParsing="false" onAction="#onCheckBoxChecked" onMouseClicked="#mouseClicked" text="CheckBox" />
+    <TextField fx:id="textField1" onKeyTyped="#keyTyped" />
+
+
+    <Button onAction="#onHelloButtonClick" text="Hello!" />
+   <Canvas fx:id="canvas" height="200.0" width="200.0" onMouseClicked="#canvasClicked" />
+    <stylesheets>
+        <URL value="@css/stylesheet.css" />
+    </stylesheets>
 </VBox>
