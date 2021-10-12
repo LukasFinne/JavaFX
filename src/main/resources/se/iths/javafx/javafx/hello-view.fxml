@@ -12,12 +12,10 @@
     </padding>
 
     <Label fx:id="welcomeText" />
-   <CheckBox fx:id="checkbox1" mnemonicParsing="false" onAction="#onCheckBoxChecked" onMouseClicked="#mouseClicked" text="CheckBox" />
-    <TextField fx:id="textField1" onKeyTyped="#keyTyped" />
-
+   <CheckBox fx:id="checkbox1" mnemonicParsing="false" onMouseClicked="#mouseClicked" text="CheckBox" />
+    <TextField fx:id="textField1"  />
 
     <Button onAction="#onHelloButtonClick" text="Hello!" />
-   <Canvas fx:id="canvas" height="200.0" width="200.0" onMouseClicked="#canvasClicked" />
     <stylesheets>
         <URL value="@css/stylesheet.css" />
     </stylesheets>

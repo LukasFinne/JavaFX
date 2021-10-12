@@ -8,7 +8,7 @@ public class Model {
     private StringProperty text;
 
     public Model() {
-        text = new SimpleStringProperty();
+        this.text = new SimpleStringProperty();
     }
 
     public String getText() {

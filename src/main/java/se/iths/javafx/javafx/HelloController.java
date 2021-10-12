@@ -25,26 +25,21 @@ public class HelloController {
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Checkbox: " + checkbox1.isSelected());
+        model.setText("Button pressed");
     }
 
     public void initialize(){
         model = new Model();
+        model.textProperty().bindBidirectional(textField1.textProperty());
+        welcomeText.textProperty().bind(model.textProperty());
 
-
-        textField1.setText("Hej");
-        textField1.textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observableValue, String oldValue, String newValue) {
-                textField1.setText(oldValue);
-            }
-        });
+        textField1.disableProperty().bind(checkbox1.selectedProperty().not());
     }
 
-    public void onCheckBoxChecked() {
+    /*public void onCheckBoxChecked() {
       // if( actionEvent.getSource() == checkbox1)
            welcomeText.setText("Checkbox: " + checkbox1.isSelected());
-    }
+    }*/
 
     public void mouseClicked(MouseEvent mouseEvent) {
         System.out.println(mouseEvent.getX() + ":" + mouseEvent.getY());
