@@ -13,6 +13,8 @@ import javafx.scene.input.MouseEvent;
 
 public class HelloController {
 
+    Model model;
+
     public TextField textField1;
     public Canvas canvas;
 
@@ -27,6 +29,9 @@ public class HelloController {
     }
 
     public void initialize(){
+        model = new Model();
+
+
         textField1.setText("Hej");
         textField1.textProperty().addListener(new ChangeListener<String>() {
             @Override
